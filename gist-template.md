@@ -57,7 +57,21 @@ In regular expressions, the OR operator, represented by the pipe symbol |, allow
 
 /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
 
-In our pattern, we have a single, cohesive pattern that validates email addresses according to a set of rules and characters, without the need for OR operators. The absence of the OR operator makes the regex pattern straightforward and efficient for validating email addresses with specific rules. It enforces a clear structure for the email address, including the local part, "@" symbol, domain part, and top-level domain.
+In our pattern, we have a single, cohesive pattern that validates email addresses according to a set of rules and characters, without the need for OR operators. The absence of the OR operator makes the regex pattern straightforward and efficient for validating email addresses with specific rules. Let me show you an example of how to use this operator. Suppose you want to match either "apple" or "banana." You can use the OR operator like this:
+
+apple|banana
+
+This regex pattern will match either "apple" or "banana" in the input text.
+
+For example, in JavaScript, you can use this pattern like so:
+
+const text = "I like apple and banana.";
+const pattern = /apple|banana/g;
+const matches = text.match(pattern);
+
+console.log(matches); // Outputs: [ 'apple', 'banana' ]
+
+The pattern /apple|banana/g matches either "apple" or "banana" in the input text, and text.match(pattern) returns an array of matching words.
 
 ### Character Classes
 
@@ -159,9 +173,24 @@ Here's how it works:
 - The space character matches the space between the two words.
 - \1 refers back to the captured word, ensuring that the same word follows.
 
-
 ### Look-ahead and Look-behind
+
+ Look-ahead and look-behind assertions are used to check for patterns that are followed or preceded by another pattern, without including the latter in the match. They are useful for validating or matching patterns that have specific requirements around their surroundings.
+
+ example: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+
+However, the pattern that we are using doesn't use look-ahead or look-behind assertions. This is because email address validation primarily focuses on matching the email address as a whole and doesn't require intricate checks on the surrounding text.
+
+Here's a simple example to illustrate the concept of look-ahead and look-behind. Suppose you want to match "apple" only when it's followed by "pie," but you don't want to include "pie" in the match. You can use a look-ahead assertion like this:
+
+apple(?= pie)
+
+- apple matches the word "apple."
+- (?= pie) is a positive look-ahead that ensures "pie" follows the word "apple" without including "pie" in the match.
+With this regex, it will match "apple" only when it's followed by "pie."
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+I'm Victor Nieves, a passionate developer with a keen interest in regular expressions and web development. I created this tutorial to help others understand the intricacies of regex and how they can be applied in real-world scenarios. You can find more of my projects and connect with me on GitHub.
+
+- GitHub: [PC-Vic](https:github.com/PC-Vic)
