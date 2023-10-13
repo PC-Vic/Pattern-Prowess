@@ -88,6 +88,8 @@ The 'i' flag makes the pattern case-insensitive, allowing it to match both upper
 
 ### Grouping and Capturing
 
+You can use parentheses '()' to create groups, which can serve several purposes, including capturing matched substrings or applying quantifiers to a group of characters. In our email address validation regex pattern, we primarily use grouping for creating character classes.
+
 ### Bracket Expressions
 
 ### Greedy and Lazy Match
