@@ -135,6 +135,31 @@ In most email address validation scenarios, boundaries like ^ and $ are crucial 
 
 ### Back-references
 
+Back-references allow you to refer back to captured groups within the regex pattern. This can be useful for matching repeated patterns or ensuring that a character matches the same character as a previously captured group.
+
+/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+
+The pattern that we are using above does not utilize back-references. This is because email address validation primarily focuses on matching the entire email address and does not require referring back to previously captured groups.
+
+Back-references are more commonly used in scenarios where you need to match repeated patterns or enforce that a character must match a previously captured character. Suppose you want to match a word that repeats, such as "apple apple" or "banana banana." You can use a back-reference to ensure the word is repeated:
+
+example: \b(\w+) \1\b
+
+- \b asserts a word boundary.
+- (\w+) captures one or more word characters (letters, digits, or underscores) in a group.
+- \1 is a back-reference to the first capturing group, ensuring that the same word appears again.
+- \b asserts another word boundary.
+  
+With this regex, it will match instances where the same word is repeated, such as "apple apple" or "banana banana."
+
+Here's how it works:
+
+- \b ensures the match starts and ends at word boundaries.
+- (\w+) captures a word.
+- The space character matches the space between the two words.
+- \1 refers back to the captured word, ensuring that the same word follows.
+
+
 ### Look-ahead and Look-behind
 
 ## Author
