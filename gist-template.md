@@ -110,6 +110,16 @@ Bracket expressions help define the set of characters that can occur at specific
 
 ### Greedy and Lazy Match
 
+quantifiers, such as * and +, are greedy by default. This means they match as much as they can while still allowing the entire regex to match successfully. However, you can make quantifiers lazy by adding a ? after them. Lazy quantifiers match as little as possible while still allowing the entire regex to match.
+
+In the email address validation regex pattern:
+/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+
++ and * are used in character classes like [A-Za-z0-9._%+-] and [A-Za-z0-9.-]. By default, they are greedy, matching as many characters as possible that satisfy the pattern. For example, [A-Za-z0-9._%+-]+ matches one or more characters in the local part of the email address.
+
+In the context of email address validation, the use of greedy quantifiers makes sense. It ensures that all valid characters are matched, allowing for a wide range of email address formats.
+
+However, you can make quantifiers lazy by adding a ? after them. For example, if you need to match as few characters as possible, you could use [A-Za-z0-9._%+-]+? to make the + quantifier for the local part of the email address lazy. In most email validation scenarios, greedy quantifiers are more appropriate.
 
 
 ### Boundaries
