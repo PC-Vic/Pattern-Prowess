@@ -123,6 +123,16 @@ However, you can make quantifiers lazy by adding a ? after them. For example, if
 
 ### Boundaries
 
+ Boundaries allow you to specify positions within the input string where the regex pattern should match. Two common boundary anchors are ^ (caret), which asserts the start of a line, and $ (dollar sign), which asserts the end of a line. These boundaries are not often used in email address validation because the entire email address needs to be validated, rather than just portions of it.
+
+ example: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+
+^ (caret) at the beginning of the pattern asserts the start of the string. This means that the match must start at the very beginning of the input string. In the context of email address validation, it ensures that the email address is matched from the start without allowing any characters before it.
+
+$ (dollar sign) at the end of the pattern asserts the end of the string. It signifies that the match must end at the very end of the input string. In the case of email validation, this ensures that no characters are allowed after the email address, and it must be the last part of the string.
+
+In most email address validation scenarios, boundaries like ^ and $ are crucial because the entire email address must be validated according to specific rules, and no extraneous characters are allowed before or after it.
+
 ### Back-references
 
 ### Look-ahead and Look-behind
