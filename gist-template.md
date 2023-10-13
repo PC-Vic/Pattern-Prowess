@@ -80,6 +80,12 @@ Email Address Validation without Flags:
 
 In our email address validation pattern, you'll notice that we haven't used any flags. The pattern itself is designed to match email addresses according to the rules and character classes we've defined. It validates email addresses case-insensitively because it includes both uppercase and lowercase letters in the character classes.
 
+If your specific requirements necessitate flags, you can add them to the regex pattern. For example, if you want the pattern to be case-insensitive, you can add the i flag like this:
+
+/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/i
+
+The 'i' flag makes the pattern case-insensitive, allowing it to match both uppercase and lowercase letters. As I mentioned before, for most email address validation scenarios, flags are not needed, and the pattern itself defines the validation rules effectively.
+
 ### Grouping and Capturing
 
 ### Bracket Expressions
