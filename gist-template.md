@@ -73,6 +73,13 @@ Specifying characters in regex can look like the following: '[A-Za-z0-9._%+-]' -
 
 ### Flags
 
+Flags are optional settings that modify the behavior of the regex pattern. Common flags in JavaScript include i (case-insensitive) and g (global). However, for email address validation, we typically don't require flags as the pattern itself defines the validation rules.
+
+Email Address Validation without Flags:
+/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+
+In our email address validation pattern, you'll notice that we haven't used any flags. The pattern itself is designed to match email addresses according to the rules and character classes we've defined. It validates email addresses case-insensitively because it includes both uppercase and lowercase letters in the character classes.
+
 ### Grouping and Capturing
 
 ### Bracket Expressions
