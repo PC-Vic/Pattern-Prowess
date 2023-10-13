@@ -121,7 +121,6 @@ In the context of email address validation, the use of greedy quantifiers makes 
 
 However, you can make quantifiers lazy by adding a ? after them. For example, if you need to match as few characters as possible, you could use [A-Za-z0-9._%+-]+? to make the + quantifier for the local part of the email address lazy. In most email validation scenarios, greedy quantifiers are more appropriate.
 
-
 ### Boundaries
 
 ### Back-references
