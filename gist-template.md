@@ -53,11 +53,12 @@ In some variations of email addresses, it's possible for parts of the email addr
 
 ### OR Operator
 
-In regular expressions, the OR operator is represented by the pipe symbol '|' which allows you to specify alternative patterns. It means that the regex can match either the pattern on the left side of the | or the pattern on the right side. In the email regex "vic123@email.com," we don't have an OR operator. The entire regex represents a fixed, exact pattern that must be matched.
+In regular expressions, the OR operator, represented by the pipe symbol |, allows you to specify alternative patterns. It means that the regex can match either the pattern on the left side of the | or the pattern on the right side. In the email address validation regex pattern, we don't typically use the OR operator to match different email address formats. Instead, we use character classes and quantifiers for flexibility.
 
-example: vic123@email\.com
+/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
 
-In this pattern, there are no OR operators, which means that the email address must match the characters "vic123@email.com" exactly. The absence of an OR operator makes this regex very strict, ensuring that only this specific email address is matched.
+In this pattern, we have a single, cohesive pattern that validates email addresses according to a set of rules and characters, without the need for OR operators. The absence of the OR operator makes the regex pattern straightforward and efficient for validating email addresses with specific rules. It enforces a clear structure for the email address, including the local part, "@" symbol, domain part, and top-level domain.
+
 
 ### Character Classes
 
