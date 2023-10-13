@@ -57,10 +57,19 @@ In regular expressions, the OR operator, represented by the pipe symbol |, allow
 
 /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
 
-In this pattern, we have a single, cohesive pattern that validates email addresses according to a set of rules and characters, without the need for OR operators. The absence of the OR operator makes the regex pattern straightforward and efficient for validating email addresses with specific rules. It enforces a clear structure for the email address, including the local part, "@" symbol, domain part, and top-level domain.
-
+In our pattern, we have a single, cohesive pattern that validates email addresses according to a set of rules and characters, without the need for OR operators. The absence of the OR operator makes the regex pattern straightforward and efficient for validating email addresses with specific rules. It enforces a clear structure for the email address, including the local part, "@" symbol, domain part, and top-level domain.
 
 ### Character Classes
+
+Character classes are used to specify a set of characters that can be matched at a particular position in a regex. In our email address validation regex pattern, character classes are integral to matching valid characters in the local and domain parts of an email address.
+
+/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+
+In this pattern, we use character classes to define valid characters for the local and domain parts of the email address:
+
+Specifying characters in regex can look like the following: '[A-Za-z0-9._%+-]' - The local part character class includes uppercase and lowercase letters, numbers, and special characters like dots (.), underscores (_), percent signs (%), plus signs (+), and hyphens (-). This allows for a wide range of valid characters in the local part of the email address.
+
+[A-Za-z0-9.-] - The domain part character class includes uppercase and lowercase letters, numbers, dots (.), and hyphens (-). It ensures that the domain part consists of valid characters.
 
 ### Flags
 
