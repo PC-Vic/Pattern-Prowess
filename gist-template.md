@@ -4,7 +4,7 @@ Email addresses can be quite diverse, and it's essential to validate them accura
 
 ## Regex Pattern:
 
-/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
+<span style="color: green;">/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/</span>
 
 ## Table of Contents
 
