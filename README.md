@@ -12,6 +12,7 @@ Welcome to "Pattern Prowess," a tutorial that will help you understand and maste
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [License](#license)
+  - [GitHub](#github)
 
 ## Introduction
 Regular expressions are powerful tools for pattern matching and text processing. In this tutorial, we will dissect a regex pattern that validates email addresses, providing a comprehensive understanding of its components.
@@ -54,3 +55,6 @@ Contributions to this tutorial are welcome. If you have suggestions for improvem
 This tutorial is licensed under the MIT License, granting you the freedom to use, modify, and distribute it.
 
 Enjoy your journey into the world of regular expressions with "Pattern Prowess." Happy regex coding!
+
+## GitHub
+- GitHub: [PC-Vic](https://github.com/PC-Vic/Pattern-Prowess)
