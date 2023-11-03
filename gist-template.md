@@ -195,4 +195,4 @@ With this regex, it will match "apple" only when it's followed by "pie."
 
 I'm Victor Nieves, a passionate developer with a keen interest in regular expressions and web development. I created this tutorial to help others understand the intricacies of regex and how they can be applied in real-world scenarios. You can find more of my projects and connect with me on GitHub.
 
-- GitHub: [PC-Vic](https:github.com/PC-Vic)
+- GitHub: [PC-Vic](https://github.com/PC-Vic/Pattern-Prowess)
